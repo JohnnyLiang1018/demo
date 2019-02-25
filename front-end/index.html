@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--    tell mobile phone starts with a scale of 1, do not zoom out-->
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <title>ThunderBolt</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row">
+                <img src="resources/img/logo.png" alt="logo" class="logo-black">
+                <ul class="main-nav">
+                    <li><a href="#">My Purchases</a></li>
+                    <li><a href="#">Aisles</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Recipes</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-text-box">
+            <h1>Market fresh. <br>Money smart.</h1>
+            <a class="btn btn-full" href="#">Shop Now</a>
+            <a class="btn btn-ghost" href="#">About Us</a>
+        </div>
+
+    </header>
+
+    <section class="section-categories">
+        <div class="row">
+            <h2>Main Categories</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-4">
+                <h3>Baby Care</h3>
+            </div>
+            <div class="col span-1-of-4">
+                <h3>Beverages</h3>
+            </div>
+            <div class="col span-1-of-4">
+                <h3>Bread &amp; Bakery</h3>
+            </div>
+            <div class="col span-1-of-4">
+                <h3>Breakfast &amp; Cereal</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--FAVORITE ITEMS SECTION-->
+    <section class="section-pics">
+        <ul class="pics-showcase clearfix">
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/1.jpg" alt="Food 1">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/2.jpg" alt="Food 2">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/3.jpg" alt="Food 3">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/4.jpg" alt="Food 4">
+                </figure>
+            </li>
+        </ul>
+        <ul class="pics-showcase clearfix">
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/5.jpg" alt="Food 5">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/6.jpg" alt="Food 6">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/7.jpg" alt="Food 7">
+                </figure>
+            </li>
+            <li>
+                <figure class="pic-photo">
+                    <img src="resources/img/8.jpg" alt="Food 8">
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <!--Download Mobile app section-->
+    <section class="download-app">
+        <div class="row">
+            <h2>Download our app</h2>
+        </div>
+
+        <div class="row">
+            <div class="col span-1-of-2 app-box">
+                <img src="resources/img/iphone-app.png" alt="app on iPhone" class="app-screen">
+            </div>
+            <div class="col span-1-of-2 app-box">
+                <div class="works-step">
+                    <div>1</div>
+                    <p>Browse and Search Inventory</p>
+                </div>
+                <div class="works-step">
+                    <div>2</div>
+                    <p>In-store Navigation and Barcode Scanning</p>
+                </div>
+                <div class="works-step">
+                    <div>3</div>
+                    <p>Accurate and Intuitive Coupons</p>
+                </div>
+                <!--app store and play store button-->
+            </div>
+            <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
+            <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
+        </div>
+    </section>
+    <!--CONTACT FORM SECTION-->
+    <section class="section-form">
+        <div class="row">
+            <h2> We are happy to hear from you</h2>
+        </div>
+        <div class="row">
+            <form method="post" action="#" class="contact-form">
+                <!--Name input-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                    </div>
+                </div>
+                <!--Email input-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                    </div>
+                </div>
+                <!--How did you find us input section-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="find-us">How did you find us?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="find-us" id="find-us">
+                            <option value="friends">Friends</option>
+                            <option value="search-engine" selected>Search engine</option>
+                            <option value="ads">Advertisement</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <!--Newsletter-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="newsletter">Newsletter?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="checkbox" name="newsletter" id="newsletter" checked> Yes, please
+                    </div>
+                </div>
+                <!--Drop us a line-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Drop us a line</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <!--send message box-->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="submit" value="Send it">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-------------------------->
+    <!--FOOTER SECTION-->
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <!--                    <li><a href="#">About us</a></li>-->
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links">
+                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>
+                Copyright &copy; 2019 by ThunderBolt. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+    <!---->
+</body>
+
+</html>
