@@ -3,6 +3,7 @@ import Footer from './components/footerComponent/footer'
 import Homepage from './components/pages/homePage'
 import Menu from './components/Menu/menu'
 import './css/individual_style.css'
+import FormComponent from './components/FormComponent/FormComponet'
 
 class App extends Component {
   constructor(props){
@@ -48,15 +49,7 @@ class App extends Component {
       return(
         <body>
           <div className = "App">
-            <Header welcomeMesage = {this.state.welcomeMessage}></Header>
-
-            <Section_one_v2 />
-
-            <Section_two />
-
-            <Section_three />
-
-            <Footer />
+            <FormComponent />
             <button onClick = {this.setwelcomeMessage}>changeHeader</button>
           </div>
         </body>
