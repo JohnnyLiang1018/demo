@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
-import Footer from './components/footerComponent/footer'
-import Homepage from './components/pages/homePage'
-import Menu from './components/Menu/menu'
 import './css/individual_style.css'
 import FormComponent from './components/FormComponent/FormComponet'
 require('./vendors/css/ionicons.min.css')
@@ -48,6 +45,8 @@ class App extends Component {
           <Header welcomeMessage = {this.state.welcomeMessage}> </Header>
           <Section_one></Section_one>
           <Section_two></Section_two>
+          <Section_three />
+          <Footer_one />
         </div>
       </body>
       </div>
@@ -101,7 +100,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <header>
         <nav>
           <div class="row">
             <img src={require('./resources/img/logo.png')} alt="logo" class="logo-black"></img>
@@ -119,7 +118,7 @@ class Header extends React.Component {
           <a class="btn btn-full" href="#">Shop Now</a>
           <a class="btn btn-ghost" href="#">About Us</a>
         </div>
-      </div>
+      </header>
     );
   }
 
@@ -229,23 +228,68 @@ class Section_two extends React.Component{
 class Section_three extends React.Component{
   render(){
     return(
-      <section id = "boxes">
-        <div class="container">
-          <div class="Items">
-            <img class="image" src="resources/img/strawberry.jpg"></img>
-          </div>
-
-          <div class="itemDescription">
-            <h1>California Strawberry- 5 lb</h1>
-            <p> $ 7.99 </p>
-            <br></br>
-            <p>All California strawberries are hand-picked to ensure only the highest quality berries are harvested. Strawberry plants continually produce new fruit throughout their season. During peak season plants are harvested every three days.</p>   
-            <button type = "submit" class = "addButton buttonStyle"> ADD </button> 
-          </div>
+      <section class="download-app">
+        <div class="row">
+          <h2>Download our app</h2>
         </div>
+        <div class="row">
+          <div class="col span-1-of-2 app-box">
+            <img src={require("./resources/img/iphone-app.png")} alt="app on iPhone" class="app-screen js--wp-2"></img>
+          </div>
+          <div class="col span-1-of-2 app-box">
+            <div class="works-step">
+              <div>1</div>
+              <p>Browse and Search Inventory</p>
+            </div>
+            <div class="works-step">
+              <div>2</div>
+              <p>In-store Navigation and Barcode Scanning</p>
+            </div>
+            <div class="works-step">
+              <div>3</div>
+              <p>Accurate and Intuitive Coupons</p>
+            </div>
+          </div>
+          <a href="#" class="btn-app"><img src={require("./resources/img/download-app.svg")} alt="App Store Button"></img></a>
+          <a href="#" class="btn-app"><img src={require("./resources/img/download-app-android.png")} alt="Play Store Button"></img></a>
+    
+        </div>
+
       </section>
     );
   }
 }
+class Footer_one extends React.Component{
+  render(){
+    return(
+    <footer>
+      <div class="row">
+        <div class="col span-1-of-2">
+          <ul class="footer-nav">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">iOS App</a></li>
+          </ul>
+        </div>
+        <div class="col span-1-of-2">
+          <ul class="social-links">
+            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+            <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <p>
+          Copyright &copy; 2019 by ThunderBolt. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    );
+  }
+}
+
 
 export default App;
