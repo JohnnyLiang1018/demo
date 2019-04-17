@@ -489,3 +489,35 @@ footer p {
 .js--wp-2.animated {
     opacity: 1;
 }
+
+.search_header {
+    background: #333333;
+    padding: 12px 0;
+}
+
+.thunderbolt_offers {
+    float: left;
+    padding: 9px 0;
+    width: 47%;
+}
+
+.thunderbolt_offers p {
+    font-size: 15px;
+    color: #fff;
+}
+
+.thunderbolt-login {
+    float: left;
+    width: 40%;
+    text-align: center;
+    padding: 9px 0;
+    display: inline-block;
+}
+
+.thunderbolt-login ul li a {
+    font-size: 1em;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+
+}
