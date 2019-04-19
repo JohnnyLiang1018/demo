@@ -608,6 +608,37 @@ img.mfp-img {
     }
 }
 
+/*--
+    - Page Banner Section Aisle
+------------------------------------------*/
+.page-banner-section-aisle {
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-banner-section-aisle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /*    background-color: #e1e9ef;*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e1e9ef), to(#656565));
+    background-image: linear-gradient(#e1e9ef, #656565);
+    opacity: 0.1;
+}
+
+@media only screen and (max-width: 767px) {
+    .page-banner-section-aisle {
+        padding: 50px 0;
+    }
+}
+
 .page-banner-content h1 {
     font-size: 36px;
     line-height: 1.25;
