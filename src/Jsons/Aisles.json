@@ -1,0 +1,93 @@
+
+
+{	"Breakfast": {"Quaker_oak": {"description": "Quaker Oats Old Fashioned - 42 Oz",
+								  "price": "5.99",
+								  "coupon": "4.99",
+								  "image": "./Json_images/quaker.jpg"
+								}
+					,
+
+					"Pop tart": {"description": "Pop-Tarts Toaster Pastries Frosted Strawberry 8 Count - 14.7 Oz",
+								  "price": "3.39",
+								  "coupon": "",
+								  "image": "./Json_images/pop_tart.jpg"
+								}
+					,
+					"Cereal": {"description": "Special K Cereal Red Berries Value Size - 16.9 Oz",
+								  "price": "5.99",
+								  "coupon": "4.99",
+								  "image": "./Json_images/cereal.jpg"
+								}
+					}
+								
+								 
+	,			  			
+
+
+	"Fruit and Vegetable": {"Oranges": {"description": "Oranges Navel Large($1.79 / Lb)",
+								  "price": "1.27",
+								  "coupon": "",
+								  "image": "./Json_images/orange.jpg"
+								}
+					,
+
+					"Apple": {"description": "Apples Granny Smith Large($2.29 / Lb)",
+								  "price": "0.92",
+								  "coupon": "",
+								  "image": "./Json_images/apple.jpg"
+								}
+					,
+					"Onion": {"description": "Onions Red ($2.29 / Lb)",
+								  "price": "1.72",
+								  "coupon": "",
+								  "image": "./Json_images/onion.jpg"
+								}
+					}	
+	,
+
+	"Meat & Seafood": {"Lobster Tails": {"description": "Seafood Counter Lobster Tails 3-4 Oz Service Case Frozen 1 Count - Each Service Case ($4.99 / Each)",
+						"price": "7.99",
+						"coupon": "4.99",
+						"image": "./Json_images/lobster.jpg"
+					}
+		,
+
+					"Lamb": {"description": "Open Nature Lamb Loin Chops - 1.00 LB($9.99 / Lb)",
+						"price": "9.99",
+						"coupon": "",
+						"image": "./Json_images/lamb.jpg"
+					}
+		,
+		"Beef": {"description": "O Organics Organic Beef Ground Beef 85% Lean 15% Fat - 16 Oz",
+						"price": "9.09",
+						"coupon": "",
+						"image": "./Json_images/beef.jpg"
+					}
+		}
+		,
+
+		"Dairy,Egg & Cheese": {"Milk": {"description": "Lucerne Milk Whole 1 Gallon - 128 Fl. Oz.($0.04 / Fl.Oz)",
+							"price": "4.89",
+							"coupon": "",
+							"image": "./Json_images/milk.jpg"
+						}
+			,
+	
+						"Butter": {"description": "Challenge Butter Real California Milk - 16 Oz($0.37 / Ounce)",
+							"price": "6.79",
+							"coupon": "5.99",
+							"image": "./Json_images/butter.jpg"
+						}
+			,
+			"Egg": {"description": "Value Corner Eggs Family Pack Large - 18 Count($3.06 / Dozen)",
+							"price": "4.59",
+							"coupon": "",
+							"image": "./Json_images/egg.jpg"
+						}
+			}
+}
+
+
+
+
+
