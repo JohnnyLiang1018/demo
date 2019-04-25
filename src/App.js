@@ -1,73 +1,91 @@
-import React, { Component } from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import * as ReactDOM from 'react-dom'
 import './css/individual_style.css'
+import{ BrowserRouter as Router, Route, Link} from "react-router-dom"
 import FormComponent from './components/FormComponent/FormComponet'
+import Websocket from 'react-websocket'
 require('./vendors/css/ionicons.min.css')
 require('./vendors/css/normalize.css')
 require('./vendors/css/grid.css')
 require('./resources/css/style.css')
 require('./resources/css/queries.css')
-require('./resources/css/font.css')
+
+
 
 class App extends Component {
+  
   constructor(props){
     super(props);
 
+  // Initialize State
     this.state = {
-      welcomeMessage: 'Welcome'
-
-      
+      isLogin: 'Login',
+      Header: 'index',
+      Section_one:'index',
+      Section_two:'index',
+      Section_three:'index',
+      Footer:'index'
     }
-    this.setwelcomeMessage = this.setwelcomeMessage.bind(this)
+    this.setLoginState = this.setLoginState.bind(this)
   }
-  setwelcomeMessage(){
-    if(this.state.welcomeMessage === 'Welcome'){
-      this.setState({welcomeMessage: 'Welcome Back'})
+
+  // Update State
+  setLoginState(event){
+    if(event === 'Login'){
+      this.setState(state =>({
+        isLogin: 'Logout'
+      }));
     }
     else{
-      this.setState({welcomeMessage: 'Welcome'})
-    }
+      this.setState(state =>({
+        isLogin:'Login'
+      }));
+    } 
   }
 
-  render() {
-    if(this.state.welcomeMessage === 'Welcome'){
 
+
+  render() {
     return (
       <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>ThunderBolt</title>
       </Head>
-
+      <Router>
       <body>
         
         <div className="App">
-          <Header welcomeMessage = {this.state.welcomeMessage}> </Header>
+          {/* Passing props to child component */}
+          <Header isLogin = {this.state.isLogin} handler = {this.setLoginState}> </Header>
           <Section_one></Section_one>
           <Section_two></Section_two>
           <Section_three />
           <Footer_one />
+
+          <Route path="/header" component={Header}></Route>
         </div>
+
       </body>
+      </Router>
       </div>
     );
     }
-    else{
-      return(
-        <body>
-          <div className = "App">
-            <FormComponent />
-            <button onClick = {this.setwelcomeMessage}>changeHeader</button>
-          </div>
-        </body>
+    // else{
+    //  return(
+    //    <body>
+    //      <div className = "App">
+    //        <FormComponent />
+    //        <button onClick = {this.setwelcomeMessage}>changeHeader</button>
+    //      </div>
+    //    </body>
 
 
 
-      );
-    }
+    //  );
+    // }
   }
 
-}
 class Head extends React.Component {
   render(){
     return ReactDOM.createPortal(this.props.children,document.head);
@@ -76,20 +94,11 @@ class Head extends React.Component {
 
 
 class Header extends React.Component {
-  componentWillMount(){
-    console.log('Component WILL MOUNT!')
-  }
   componentDidMount(){
     console.log('Component DID MOUNT!')
   }
-  componentWillReceiveProps(newProps){
-    console.log('Component WILL RECEIVE PROPS!')
-  }
   shouldComponentUpdate(newProps, newState) {
     return true;
- }
- componentWillUpdate(nextProps, nextState) {
-    console.log('Component WILL UPDATE!');
  }
  componentDidUpdate(prevProps, prevState) {
     console.log('Component DID UPDATE!')
@@ -103,13 +112,24 @@ class Header extends React.Component {
       <header>
         <nav>
           <div class="row">
-            <img src={require('./resources/img/logo.png')} alt="logo" class="logo-black"></img>
+            <img src={require('./resources/img/black-logo.png')} alt="logo" class="logo-black"></img>
+            <img src={require('./resources/img/logo.png')} alt="logo" class="logo"></img>
+           
+            {/* Routing */}
+            <Router>
             <ul class ="main-nav">
               <li><a href="#">My Purchases</a></li>
               <li><a href="#">Aisles</a></li>
               <li><a href="#">Deals</a></li>
-              <li><a href="#">Recipes</a></li>
+              <li><a href="#"><Link to="/Login/">Receipe</Link></a></li>
+
+            {/* Update state and use props value */}
+              <li><a href="#" onClick={this.props.handler('Login')}>{this.props.isLogin}</a></li>
+              <li><a href="cart.html"><img src={require('./resources/img/cart-white.png')} alt="Cart"></img><span>02($250)</span></a></li>
+              {/* Define routing path */}
+              <Route path="/Login/" component={Section_one} />
             </ul>
+            </Router>
           </div>
         </nav>
         <div class="hero-text-box">
@@ -254,7 +274,7 @@ class Section_three extends React.Component{
           <a href="#" class="btn-app"><img src={require("./resources/img/download-app-android.png")} alt="Play Store Button"></img></a>
     
         </div>
-
+      
       </section>
     );
   }
