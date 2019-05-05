@@ -12,19 +12,21 @@ export default class App extends Component {
     render() {
       return(
           <div>
-            <meta charset="utf-8" />
-            <meta http-equiv="x-ua-compatible" content="ie=edge" />
-            <title>Thunderbolts</title>
-            <meta name="description" content="" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="x-ua-compatible" content="ie=edge" />
+                <title>Thunderbolts</title>
+                <meta name="description" content="" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-            <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />            
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css" />           
-            <link rel="stylesheet" href="assets/css/icon-font.min.css" />
-            <link rel="stylesheet" href="assets/css/plugins.css" />
-            <link rel="stylesheet" href="assets/css/helper.css" />
-            <link rel="stylesheet" href="assets/css/style.css" />
-            <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+                <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />            
+                <link rel="stylesheet" href="assets/css/bootstrap.min.css" />           
+                <link rel="stylesheet" href="assets/css/icon-font.min.css" />
+                <link rel="stylesheet" href="assets/css/plugins.css" />
+                <link rel="stylesheet" href="assets/css/helper.css" />
+                <link rel="stylesheet" href="assets/css/style.css" />
+                <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+            </head>
 
 
             <div className="main-wrapper">
@@ -83,93 +85,7 @@ export default class App extends Component {
                 </div>
                 </div>
         
-                <div className="header-bottom header-bottom-one header-sticky@">
-                    <div className="container-fluid">
-                        <div className="row menu-center align-items-center justify-content-between">
-        
-                            <div className="col mt-15 mb-15">
 
-                                <div className="header-logo">
-                                    <a href="index.html">
-                                        <img src={require("./assets/images/logo.png")} alt="Jadusona" />
-                                    </a>
-                                </div>
-                            </div>
-        
-                            <div className="col order-2 order-lg-3">
-                                
-                                <div className="header-shop-links">
-        
-                                    <div className="header-search">
-                                        <button className="search-toggle">
-                                        <img src={require("./assets/images/icons/search.png")} alt="Search Toggle" /><img className="toggle-close" src={require("./assets/images/icons/close.png")} alt="Search Toggle" /></button>
-                                        <div className="header-search-wrap">
-                                            <form action="#">
-                                                <input type="text" placeholder="Type and hit enter" />
-                                                <button><img src={require("./assets/images/icons/search.png")} alt="Search" /></button>
-                                            </form>
-                                        </div>
-                                    </div>
-        
-                                    <div className="header-wishlist">
-                                        <a href="wishlist.html"><img src={require("./assets/images/icons/wishlist.png")} alt="Wishlist" /> <span>02</span></a>
-                                    </div>
-        
-                                    <div className="header-mini-cart">
-                                        <a href="cart.html"><img src={require("./assets/images/icons/cart.png")} alt="Cart" /> <span>02($250)</span></a>
-                                    </div>
-        
-                                </div>
-                            </div>
-        
-                            <div className="col order-3 order-lg-2">
-                                <div className="main-menu">
-                                    <nav>
-                                        <ul>
-                                            <li><a href="index.html">HOME</a>
-                                                <ul className="sub-menu">
-                                                    <li><a href="index.html">Home One</a></li>
-                                                    <li><a href="index-2.html">Home Two</a></li>
-                                                    <li><a href="index-box.html">Home Box</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="shop.html">SHOP</a>
-                                                <ul className="sub-menu">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                                    <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                    <li><a href="single-product.html">Single Product</a></li>
-                                                    <li><a href="single-product-left-sidebar.html">Single Product Left Sidebar</a></li>
-                                                    <li><a href="single-product-right-sidebar.html">Single Product Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li className="active"><a href="#">PAGES</a>
-                                                <ul className="sub-menu">
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="login-register.html">Login & Register</a></li>
-                                                    <li className="active"><a href="wishlist.html">Wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog.html">BLOG</a>
-                                                <ul className="sub-menu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Single Blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">CONTACT</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-        
-                            <div className="mobile-menu order-12 d-block d-lg-none col"></div>
-        
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
         
             <div className="page-banner-section section" style={{backgroundImage: `url(${Background})`}} >
                 <div className="container">
@@ -322,6 +238,7 @@ export default class App extends Component {
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/ajax-mail.js"></script>
         <script src="assets/js/main.js"></script>
+        </div>
         </div>
 
       );
