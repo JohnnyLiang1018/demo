@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Background from './assets/images/product/HistoryBack.jpg';
 require('./assets/css/style.css');
 require ('./assets/images/favicon.ico');
 require('./assets/css/bootstrap.min.css');
@@ -13,7 +14,7 @@ export default class App extends Component {
           <div>
             <meta charset="utf-8" />
             <meta http-equiv="x-ua-compatible" content="ie=edge" />
-            <title>Jadusona - eCommerce Baby shop Bootstrap4 Template</title>
+            <title>Thunderbolts</title>
             <meta name="description" content="" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -36,7 +37,7 @@ export default class App extends Component {
         
                             <div className="col mt-10 mb-10 d-none d-md-flex">
                                 <div className="header-top-left">
-                                    <p>Welcome to Jadusona</p>
+                                    <p>Welcome to Thunderbolts</p>
                                     <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@ export default class App extends Component {
 
                                 <div className="header-logo">
                                     <a href="index.html">
-                                        <img src="assets/images/logo.png" alt="Jadusona" />
+                                        <img src={require("./assets/images/logo.png")} alt="Jadusona" />
                                     </a>
                                 </div>
                             </div>
@@ -101,21 +102,21 @@ export default class App extends Component {
         
                                     <div className="header-search">
                                         <button className="search-toggle">
-                                        <img src="assets/images/icons/search.png" alt="Search Toggle" /><img className="toggle-close" src="assets/images/icons/close.png" alt="Search Toggle" /></button>
+                                        <img src={require("./assets/images/icons/search.png")} alt="Search Toggle" /><img className="toggle-close" src={require("./assets/images/icons/close.png")} alt="Search Toggle" /></button>
                                         <div className="header-search-wrap">
                                             <form action="#">
                                                 <input type="text" placeholder="Type and hit enter" />
-                                                <button><img src="assets/images/icons/search.png" alt="Search" /></button>
+                                                <button><img src={require("./assets/images/icons/search.png")} alt="Search" /></button>
                                             </form>
                                         </div>
                                     </div>
         
                                     <div className="header-wishlist">
-                                        <a href="wishlist.html"><img src="assets/images/icons/wishlist.png" alt="Wishlist" /> <span>02</span></a>
+                                        <a href="wishlist.html"><img src={require("./assets/images/icons/wishlist.png")} alt="Wishlist" /> <span>02</span></a>
                                     </div>
         
                                     <div className="header-mini-cart">
-                                        <a href="cart.html"><img src="assets/images/icons/cart.png" alt="Cart" /> <span>02($250)</span></a>
+                                        <a href="cart.html"><img src={require("./assets/images/icons/cart.png")} alt="Cart" /> <span>02($250)</span></a>
                                     </div>
         
                                 </div>
@@ -170,15 +171,15 @@ export default class App extends Component {
         
             </div>
         
-            <div className="page-banner-section section" style={{backgroundImage: "url(assets/images/hero/hero-1.jpg)"}}>
+            <div className="page-banner-section section" style={{backgroundImage: `url(${Background})`}} >
                 <div className="container">
                     <div className="row">
                         <div className="page-banner-content col">
         
-                            <h1>Wishlist</h1>
+                            <h1>My Purchase History</h1>
                             <ul className="page-breadcrumb">
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="wishlist.html">History</a></li>
                             </ul>
         
                         </div>
@@ -206,17 +207,17 @@ export default class App extends Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td className="pro-thumbnail"><a href="#"><img src="assets/images/product/product-1.jpg" alt="" /></a></td>
-                                                <td className="pro-title"><a href="#">Tmart Baby Dress</a></td>
-                                                <td className="pro-price"><span className="amount">$25</span></td>
+                                                <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/CheeriosFam.png")} alt="" /></a></td>
+                                                <td className="pro-title"><a href="#">Cheerios Gluten Free</a></td>
+                                                <td className="pro-price"><span className="amount">$4.3</span></td>
                                                 <td className="pro-quantity"><div className="pro-qty"><input type="text" value="1" /></div></td>
                                                 <td className="pro-add-cart"><a href="#">add to cart</a></td>
                                                 <td className="pro-remove"><a href="#">×</a></td>
                                             </tr>
                                             <tr>
-                                                <td className="pro-thumbnail"><a href="#"><img src="assets/images/product/product-2.jpg" alt="" /></a></td>
-                                                <td className="pro-title"><a href="#">Jumpsuit Outfits</a></td>
-                                                <td className="pro-price"><span className="amount">$09</span></td>
+                                                <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/EGGPic.jpg")} alt="" /></a></td>
+                                                <td className="pro-title"><a href="#">A Large Brown Eggs</a></td>
+                                                <td className="pro-price"><span className="amount">$3.5</span></td>
                                                 <td className="pro-quantity"><div className="pro-qty"><input type="text" value="1" /></div></td>
                                                 <td className="pro-add-cart"><a href="#">add to cart</a></td>
                                                 <td className="pro-remove"><a href="#">×</a></td>
@@ -236,31 +237,7 @@ export default class App extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="brand-slider">
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-1.png" alt="" />
-                            </div>
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-2.png" alt="" />
-                            </div>
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-3.png" alt="" />
-                            </div>
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-4.png" alt="" />
-                            </div>
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-5.png" alt="" />
-                            </div>
-        
-                            <div className="brand-item col">
-                                <img src="assets/images/brands/brand-6.png" alt="" />
-                            </div>
-        
+                            <img src={require("./assets/images/product/Product Image.jpg")} alt="" />
                         </div>
                     </div>
                 </div>
