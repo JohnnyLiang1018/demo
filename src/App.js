@@ -9,11 +9,13 @@ require('./vendors/css/normalize.css')
 require('./vendors/css/grid.css')
 require('./resources/css/style.css')
 require('./resources/css/queries.css')
+require('./components/FormComponent/form.css')
 
 
 
 class App extends Component {
   
+
   constructor(props){
     super(props);
 
@@ -24,16 +26,23 @@ class App extends Component {
       Section_one:'index',
       Section_two:'index',
       Section_three:'index',
-      Footer:'index'
+      Footer:'index',
+      ws: new WebSocket('ws://localhost:8082'),
+      message:''
     }
-    this.setLoginState = this.setLoginState.bind(this)
+    this.updateState = this.updateState.bind(this)
   }
 
   // Update State
-  setLoginState(event){
+  updateState(event){
     if(event === 'Login'){
       this.setState(state =>({
         isLogin: 'Logout'
+      }));
+    }
+    else if(event === 'LoginSuccess'){
+      this.setState(state =>({
+        isLogin: 'Login'
       }));
     }
     else{
@@ -46,31 +55,37 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <title>ThunderBolt</title>
-      </Head>
-      <Router>
-      <body>
-        
-        <div className="App">
-          {/* Passing props to child component */}
-          <Header isLogin = {this.state.isLogin} handler = {this.setLoginState}> </Header>
-          <Section_one></Section_one>
-          <Section_two></Section_two>
-          <Section_three />
-          <Footer_one />
-
-          <Route path="/header" component={Header}></Route>
+    if(this.state.isLogin === 'Logout'){
+      return (
+        <div>
+          <FormComponent handler = {this.updateState}/>
         </div>
-
-      </body>
-      </Router>
-      </div>
     );
     }
+    else if(this.state.isLogin === 'Login'){
+      return(
+        <div>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+          <title>ThunderBolt</title>
+        </Head>
+        <body>
+        
+          <div className="App">
+          {/* Passing props to child component */}
+            <Header isLogin = {this.state.isLogin} handler = {this.updateState}> </Header>
+            <Section_one></Section_one>
+            <Section_two></Section_two>
+            <Section_three />
+            <Footer_one />
+          </div>
+
+        </body>
+ 
+        </div>
+      );
+     }
+  }
     // else{
     //  return(
     //    <body>
@@ -111,32 +126,28 @@ class Header extends React.Component {
     return (
       <header>
         <nav>
-          <div class="row">
+          <div className="row">
             <img src={require('./resources/img/black-logo.png')} alt="logo" class="logo-black"></img>
             <img src={require('./resources/img/logo.png')} alt="logo" class="logo"></img>
            
-            {/* Routing */}
-            <Router>
-            <ul class ="main-nav">
+            
+            <ul className ="main-nav">
               <li><a href="#">My Purchases</a></li>
               <li><a href="#">Aisles</a></li>
               <li><a href="#">Deals</a></li>
-              <li><a href="#"><Link to="/Login/">Receipe</Link></a></li>
+              <li><a href="#">Receip</a></li>
 
             {/* Update state and use props value */}
-              <li><a href="#" onClick={this.props.handler('Login')}>{this.props.isLogin}</a></li>
+              <li><a href="#" onClick={(param) => this.props.handler('Login')}>{this.props.isLogin}</a></li>
               <li><a href="cart.html"><img src={require('./resources/img/cart-white.png')} alt="Cart"></img><span>02($250)</span></a></li>
-              {/* Define routing path */}
-              <Route path="/Login/" component={Section_one} />
             </ul>
-            </Router>
           </div>
         </nav>
-        <div class="hero-text-box">
+        <div className="hero-text-box">
           <h1>Market fresh.</h1>
           <h1>Money smart.</h1>
-          <a class="btn btn-full" href="#">Shop Now</a>
-          <a class="btn btn-ghost" href="#">About Us</a>
+          <a className="btn btn-full" href="#">Shop Now</a>
+          <a className="btn btn-ghost" href="#">About Us</a>
         </div>
       </header>
     );
@@ -147,7 +158,7 @@ class Header extends React.Component {
 class Section_one extends React.Component{
   render(){
       return(
-        <section class="section-categories">
+        <section className="section-categories">
           <div class="row">
             <h2>Main Categories</h2>
           </div>
