@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import ReactDOM from 'react-dom';
 import Background from './assets/images/hero/UserOrGuest.jpg';
 require('./assets/css/style.css');

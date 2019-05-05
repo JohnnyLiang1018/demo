@@ -519,7 +519,7 @@ img.mfp-img {
 .blockquote {
     max-width: 800px;
     background-color: #f5001c;
-    #f5001c padding: 40px 50px;
+    padding: 40px 50px;
     position: relative;
 }
 
@@ -2743,7 +2743,7 @@ img.mfp-img {
     right: 0;
     top: 0;
     text-align: center;
-    background-image: url(../images/banner/banner-3-shape.png);
+    /* background-image: url(../images/banner/banner-3-shape.png); */
     padding: 40px 25px 70px 60px;
     background-repeat: no-repeat;
     background-size: cover;

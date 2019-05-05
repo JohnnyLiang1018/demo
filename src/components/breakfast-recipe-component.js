@@ -79,7 +79,7 @@ class Banner extends React.Component {
   }
 
 
-  class Body extends React.Component {
+class Body extends React.Component {
     render () {
       return (
       <div>
@@ -138,7 +138,5 @@ class Banner extends React.Component {
     }
   }
 
-2
 
-  export default App;
-  ReactDOM.render(<App/>, document.getElementById('root'));
+export default App;

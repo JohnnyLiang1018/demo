@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import ReactDOM from 'react-dom';
 import Background from './assets/images/hero/CartHeader.jpg'; //import for the banner image
 require('./assets/css/style.css');

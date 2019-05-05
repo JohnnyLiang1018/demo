@@ -49,6 +49,7 @@ class FormComponent extends Component {
       Password: ${this.state.password}
   
       `)
+      this.props.handler('LoginSuccess')
     }else {
       console.error('Form Invalid- display error message')
     }
@@ -136,7 +137,7 @@ class FormComponent extends Component {
                 name = "email"
                 noValidate  
                 onChange={this.handleChange}
-             />
+             /> 
               {formErros.email.length > 0 && (<span className="errorMessage">{formErros.email}</span>)}
     
              </div>
