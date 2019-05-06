@@ -71,7 +71,7 @@ class Header extends React.Component {
 
             {/* Update state and use props value */}
               <li><a href="#" onClick={(param)=> this.props.handler('login')}>{this.props.isLogin}</a></li>
-              <li><a href="cart.html"><img src={require('../resources/img/cart-white.png')} alt="Cart"></img><span>02($250)</span></a></li>
+              <li><a href="#" onClick={(param)=> this.props.handler('cart')}><img src={require('../resources/img/cart-white.png')} alt="Cart"></img><span>02($250)</span></a></li>
             </ul>
           </div>
         </nav>

@@ -12,46 +12,14 @@ require('./assets/css/style.css');
 //This is the class where the components will get called
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    // Initialize State
-    this.state = {
-      isLogin: 'Login',
-      Header: 'index',
-      Section_one: 'index',
-      Section_two: 'index',
-      Section_three: 'index',
-      Footer: 'index'
-    }
-    this.setLoginState = this.setLoginState.bind(this)
-  }
-
-  // Update State
-  setLoginState(event) {
-    if (event === 'Login') {
-      this.setState(state => ({
-        isLogin: 'Logout'
-      }));
-    }
-    else {
-      this.setState(state => ({
-        isLogin: 'Login'
-      }));
-    }
-  }
-
-
-
-
   //This part is where the render calls specific classes 
   //Everthing inside the <div></div> needs to be modified according to your specific page
   render() {
     return (
       <div className="App">
       
-        <Banner></Banner>
-        <Body></Body>
+        <Banner handler ={this.props.handler}></Banner>
+        <Body handler = {this.props.handler}></Body>
       </div>
     );
   };
@@ -80,8 +48,8 @@ class Banner extends React.Component {
             <div className="page-banner-content col">
               <h1>Your Shopping Cart</h1>
               <ul className="page-breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#" onClick={(param)=> this.props.handler('homepage')}>Home</a></li>
+                <li><a href="#" onClick={(param)=> this.props.handler('cart')}>Cart</a></li>
               </ul>
             </div>
           </div>
@@ -178,7 +146,7 @@ class Body extends React.Component {
                       </tbody>
                     </table>
                     <div className="proceed-to-checkout section mt-30">
-                      <a href="#">Proceed to Checkout</a>
+                      <a href="#" onClick={(param)=> this.props.handler('userCheckout')}>Proceed to Checkout</a>
                     </div>
                   </div>
                 </div>
@@ -222,4 +190,3 @@ class Body extends React.Component {
 
 
 export default App;
-ReactDOM.render(<App />, document.getElementById('root'));

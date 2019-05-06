@@ -12,35 +12,6 @@ require('./assets/css/style.css');
 //This is the class where the components will get called
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    // Initialize State
-    this.state = {
-      isLogin: 'Login',
-      Header: 'index',
-      Section_one: 'index',
-      Section_two: 'index',
-      Section_three: 'index',
-      Footer: 'index'
-    }
-    this.setLoginState = this.setLoginState.bind(this)
-  }
-
-  // Update State
-  setLoginState(event) {
-    if (event === 'Login') {
-      this.setState(state => ({
-        isLogin: 'Logout'
-      }));
-    }
-    else {
-      this.setState(state => ({
-        isLogin: 'Login'
-      }));
-    }
-  }
-
 
 
 
@@ -50,7 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Banner></Banner>
-        <Body></Body>
+        <Body handler = {this.props.handler}></Body>
       </div>
     );
   };
@@ -102,7 +73,7 @@ class Body extends React.Component {
                     <div className="row">
                       <div className="col-12 mb-15"><input type="text" placeholder="Username or Email Address" /></div>
                       <div className="col-12 mb-15"><input type="password" placeholder="Password" /></div>
-                      <div className="col-12"><input type="submit" defaultValue="Login and Checkout" /></div>
+                      <div className="col-12"><input type="submit" defaultValue="Login and Checkout" onClick={(param)=> this.props.handler('checkout')} /></div>
                     </div>
                   </form>
                 </div>
@@ -115,7 +86,7 @@ class Body extends React.Component {
                   <h3>Guest Checkout</h3>
                   <form action="#">
                     <p>This is a paragraph. No promo for guest checkout?</p>
-                    <button className="place-order">Guest Checkout</button>
+                    <button className="place-order" onClick={(param)=> this.props.handler('checkout')}>Guest Checkout</button>
 
                   </form>
                 </div>
