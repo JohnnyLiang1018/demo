@@ -101,7 +101,7 @@ class Body extends React.Component {
                 <div className="login-register-form-wrap">
                   <h3>Order Confirmation</h3>
                   <form action="#">
-                    <p>Your Order Has Been Placed</p>
+                    <p>Your Order Has Been Placed. Thank you for shopping at Thunderbolt.com</p>
                     <button className="place-order">Go Back To Homepage</button>
 
                   </form>
