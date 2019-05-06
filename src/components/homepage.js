@@ -67,7 +67,7 @@ class Header extends React.Component {
               <li><a href="#" onClick={(param)=> this.props.handler('history')}>My Purchases</a></li>
               <li><a href="#" onClick={(param)=> this.props.handler('aisle')}>Aisles</a></li>
               <li><a href="#" onClick={(param)=> this.props.handler('deal')}>Deals</a></li>
-              <li><a href="#" onClick={(param)=> this.props.handler('recipeList')}>Receip</a></li>
+              <li><a href="#" onClick={(param)=> this.props.handler('recipeList')}>Recipe</a></li>
 
             {/* Update state and use props value */}
               <li><a href="#" onClick={(param)=> this.props.handler('login')}>{this.props.isLogin}</a></li>

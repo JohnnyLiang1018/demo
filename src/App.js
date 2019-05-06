@@ -3,12 +3,12 @@ import * as ReactDOM from 'react-dom'
 import{ BrowserRouter as Router, Route, Link} from "react-router-dom"
 import FormComponent from './components/FormComponent/FormComponet'
 import Websocket from 'react-websocket'
-import AisleComponent from './components/AisleComponent'
+import AisleComponent from './components/Aisle with Headerfooter'
 import BreakfastRecipe from './components/breakfast-recipe-component'
 import Homepage from './components/homepage'
 import Checkout from './components/CheckoutComponent'
 import Cart from './components/CartComponent'
-import Deal from './components/Deal'
+import Deal from './components/New_deal'
 import DinnerRecipe from './components/dinner-recipe-component'
 import History from './components/History'
 import LunchRecipe from './components/lunch-recipe-component'
@@ -35,16 +35,14 @@ class App extends Component {
 
   // Update State
   updateState(event){
-    if(event === 'Login'){
+    if(event === 'login'){
       this.setState(state =>({
         isLogin: 'Logout'
       }));
     }
-    else{
       this.setState(state =>({
         current_page: event
       }));
-    } 
   }
 
 

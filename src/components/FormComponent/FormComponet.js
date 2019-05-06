@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
 const formValid = formErros =>{
@@ -23,10 +22,10 @@ class FormComponent extends Component {
 
       this.state ={
         newUser:{
-        firstName: null,
-        lastName: null,
-        email:null,
-        password: null
+        firstName: 'johnny',
+        lastName: 'liang',
+        email:'test@sjsu.edu',
+        password: '123456'
         },
         formErros: {
           firstName:"",
@@ -41,7 +40,13 @@ class FormComponent extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    let userData = this.state.newUser;
+    const user = {
+      first_name: this.state.firstName,
+      last_name: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password
+    }
+
     if (formValid(this.state.formErros)){
   
       console.log(`
@@ -53,17 +58,13 @@ class FormComponent extends Component {
   
       `)
       fetch('http://localhost:8083',{
-        method: "POST",
-        body: JSON.stringify(userData),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }).then(response => {
-        response.json().then(data => {
-          console.log("Successful");
-        })
+        method: 'POST',
+        body: JSON.stringify(user)
       })
+      .then(response => response.json())
+      .then(response => console.log(JSON.stringify(response)))
+      .catch(error => console.error('Error:', error));
+
     }else {
       console.error('Form Invalid- display error message')
     }
@@ -172,7 +173,7 @@ class FormComponent extends Component {
     
              </div>
              <div className="createAccount">
-             <button type= "submit">Create Account</button>
+             <button type= "submit" onClick={(param)=> this.props.handler('homepage')}>Create Account</button>
              <small>Already Have an Account </small>
              </div>
             </form>
