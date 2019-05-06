@@ -86,7 +86,7 @@ class Body extends React.Component {
                       <tbody>
                         <tr>
                           <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/CheeriosFam.png")} alt /></a></td>
-                          <td className="pro-title"><a href="#">Tmart Baby Dress</a></td>
+                          <td className="pro-title"><a href="#">Cheerios Gluten Free</a></td>
                           <td className="pro-price"><span className="amount">$4.30</span></td>
                           <td className="pro-quantity"><div className="pro-qty"><input type="text" defaultValue={1} /></div></td>
                           <td className="pro-subtotal">$25</td>
@@ -94,7 +94,7 @@ class Body extends React.Component {
                         </tr>
                         <tr>
                           <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/EGGPic.jpg")} alt /></a></td>
-                          <td className="pro-title"><a href="#">Jumpsuit Outfits</a></td>
+                          <td className="pro-title"><a href="#">A Large Brown Eggs</a></td>
                           <td className="pro-price"><span className="amount">$3.50</span></td>
                           <td className="pro-quantity"><div className="pro-qty"><input type="text" defaultValue={1} /></div></td>
                           <td className="pro-subtotal">$09</td>
