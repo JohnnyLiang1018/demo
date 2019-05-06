@@ -25,7 +25,7 @@ class App extends Component {
 
   // Initialize State
     this.state = {
-      isLogin: 'Login',
+      isLogin: 'login',
       current_page:'homepage',
       ws: new WebSocket('ws://localhost:8082'),
       message:''
@@ -57,7 +57,7 @@ class App extends Component {
         </div>
     );
     }
-    else if(this.state.current_page === 'Login'){
+    else if(this.state.current_page === 'login'){
       return(
         <div>
           <FormComponent handler = {this.updateState}/>

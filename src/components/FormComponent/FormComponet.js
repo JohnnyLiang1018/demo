@@ -22,23 +22,26 @@ class FormComponent extends Component {
     super(props);
 
       this.state ={
+        newUser:{
         firstName: null,
         lastName: null,
         email:null,
-        password: null,
+        password: null
+        },
         formErros: {
           firstName:"",
           lastName: "",      
           email:"",
           password: ""
         }
-      
+    
     };
     
   }
 
   handleSubmit = e => {
     e.preventDefault();
+    let userData = this.state.newUser;
     if (formValid(this.state.formErros)){
   
       console.log(`
@@ -49,7 +52,18 @@ class FormComponent extends Component {
       Password: ${this.state.password}
   
       `)
-      this.props.handler('LoginSuccess')
+      fetch('http://localhost:8083',{
+        method: "POST",
+        body: JSON.stringify(userData),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      }).then(response => {
+        response.json().then(data => {
+          console.log("Successful");
+        })
+      })
     }else {
       console.error('Form Invalid- display error message')
     }

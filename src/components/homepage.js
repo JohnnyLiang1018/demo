@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import * as ReactDOM from 'react-dom'
-import FormComponent from './FormComponent/FormComponet'
 
 require('../vendors/css/ionicons.min.css')
 require('../vendors/css/normalize.css')
@@ -42,7 +41,7 @@ class Head extends React.Component {
 class Header extends React.Component {
     
   
-    componentDidMount(){
+  componentDidMount(){
     console.log('Component DID MOUNT!')
   }
   shouldComponentUpdate(newProps, newState) {
@@ -71,7 +70,7 @@ class Header extends React.Component {
               <li><a href="#" onClick={(param)=> this.props.handler('recipeList')}>Receip</a></li>
 
             {/* Update state and use props value */}
-              <li><a href="#" onClick={(param) => this.props.handler('Login')}>{this.props.isLogin}</a></li>
+              <li><a href="#" onClick={(param)=> this.props.handler('login')}>{this.props.isLogin}</a></li>
               <li><a href="cart.html"><img src={require('../resources/img/cart-white.png')} alt="Cart"></img><span>02($250)</span></a></li>
             </ul>
           </div>

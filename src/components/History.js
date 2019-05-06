@@ -187,7 +187,7 @@ export default class App extends Component {
                             <h4 className="title">INFORMATION</h4>
                             <ul>
                                 <li><a href="#">About us</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Terms and Conditions</a></li>
                                 <li><a href="#">Payment Method</a></li>
                                 <li><a href="#">Product Warranty</a></li>
                                 <li><a href="#">Return Process</a></li>

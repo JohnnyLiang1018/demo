@@ -14,7 +14,7 @@ const con = mysql.createConnection({
 con.connect(function(err){
     if (err) throw err;
     console.log("Connected");
-    let sql = 'CREATE TABLE customersss (name VARCHAR(255), address VARCHAR(255) )';
+    let sql = 'CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255) )';
     con.query(sql,function(err,result){
         if (err) throw err;
         console.log("The customers table is created");
@@ -24,8 +24,8 @@ con.connect(function(err){
 var server = http.createServer(function(request,response){
     console.log("HTTP createServer")
 });
-server.listen(8082,function(){
-    console.log((new Data())+"Server is listening on port"+ 8082)
+server.listen(8083,function(){
+    console.log("Server is listening on port"+ 8083)
 });
 wsServer = new WebSocketServer({
     // Websocket server is tied to a HTTP server.
