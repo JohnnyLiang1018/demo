@@ -85,17 +85,17 @@ class Body extends React.Component {
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/product-1.jpg")} alt /></a></td>
-                          <td className="pro-title"><a href="#">Tmart Baby Dress</a></td>
-                          <td className="pro-price"><span className="amount">$25</span></td>
+                          <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/CheeriosFam.png")} alt /></a></td>
+                          <td className="pro-title"><a href="#">Cheerios Gluten Free</a></td>
+                          <td className="pro-price"><span className="amount">$4.30</span></td>
                           <td className="pro-quantity"><div className="pro-qty"><input type="text" defaultValue={1} /></div></td>
                           <td className="pro-subtotal">$25</td>
                           <td className="pro-remove"><a href="#">×</a></td>
                         </tr>
                         <tr>
-                          <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/product-2.jpg")} alt /></a></td>
-                          <td className="pro-title"><a href="#">Jumpsuit Outfits</a></td>
-                          <td className="pro-price"><span className="amount">$09</span></td>
+                          <td className="pro-thumbnail"><a href="#"><img src={require("./assets/images/product/EGGPic.jpg")} alt /></a></td>
+                          <td className="pro-title"><a href="#">A Large Brown Eggs</a></td>
+                          <td className="pro-price"><span className="amount">$3.50</span></td>
                           <td className="pro-quantity"><div className="pro-qty"><input type="text" defaultValue={1} /></div></td>
                           <td className="pro-subtotal">$09</td>
                           <td className="pro-remove"><a href="#">×</a></td>
@@ -127,20 +127,20 @@ class Body extends React.Component {
                       <tbody>
                         <tr className="cart-subtotal">
                           <th>Subtotal</th>
-                          <td><span className="amount">$306.00</span></td>
+                          <td><span className="amount">$7.80</span></td>
                         </tr>
                         <tr className="cart-shipping">
                           <th>Tax</th>
-                          <td><span className="amount">$0.00</span></td>
+                          <td><span className="amount">$1.00</span></td>
                         </tr>
                         <tr className="cart-shipping">
                           <th>Shipping Fee</th>
-                          <td><span className="amount">$0.00</span></td>
+                          <td><span className="amount">$5.00</span></td>
                         </tr>
                         <tr className="order-total">
                           <th>Total</th>
                           <td>
-                            <strong><span className="amount">$306.00</span></strong>
+                            <strong><span className="amount">$13.80</span></strong>
                           </td>
                         </tr>
                       </tbody>
