@@ -45,14 +45,19 @@ class Banner extends React.Component {
   render() {
     return (
       <div className="page-banner-section section" style={banner}>
-        <div className="container">
-          <div className="row">
-            <div className="page-banner-content col">
-              <h1>Registered User Or Guest Checkout</h1>
-            </div>
-          </div>
-        </div>
+  <div className="container">
+    <div className="row">
+      <div className="page-banner-content col text-left">
+        <h1><font size="7" color="white">Registered User Or Guest Checkout</font></h1>
+        <ul className="page-breadcrumb">
+          <li><a href="index.html"><font color="white">Home</font></a></li>
+          <li><a href="shop-left-sidebar.html"><font color="white">Registered User or Guest Checkout</font></a></li>
+        </ul>
+
       </div>
+    </div>
+  </div>
+</div>
     );
   };
 }
