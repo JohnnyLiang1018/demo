@@ -14,7 +14,7 @@ import History from './components/History'
 import LunchRecipe from './components/lunch-recipe-component'
 import RecipeList from './components/recipe-list-component'
 import UserCheckout from './components/RegisteredUserOrGuestCheckoutComponent'
-
+import LoginPage from './components/LoginPage'
 
 
 class App extends Component {
@@ -37,9 +37,10 @@ class App extends Component {
   updateState(event){
     if(event === 'login'){
       this.setState(state =>({
-        isLogin: 'Logout'
+        isLogin: 'logout'
       }));
     }
+    
       this.setState(state =>({
         current_page: event
       }));
@@ -55,7 +56,7 @@ class App extends Component {
         </div>
     );
     }
-    else if(this.state.current_page === 'login'){
+    else if(this.state.current_page === 'register'){
       return(
         <div>
           <FormComponent handler = {this.updateState}/>
@@ -130,6 +131,13 @@ class App extends Component {
       return(
         <div>
           <RecipeList handler = {this.updateState} />
+        </div>
+      )
+    }
+    else if(this.state.current_page === 'login' && this.state.isLogin === 'logout'){
+      return (
+        <div>
+          <LoginPage handler = {this.updateState} />
         </div>
       )
     }

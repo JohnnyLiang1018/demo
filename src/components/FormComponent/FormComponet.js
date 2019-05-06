@@ -174,7 +174,7 @@ class FormComponent extends Component {
              </div>
              <div className="createAccount">
              <button type= "submit" onClick={(param)=> this.props.handler('homepage')}>Create Account</button>
-             <small>Already Have an Account </small>
+             <li><a href="#" onClick={(param)=> this.props.handler('login')}>Already Have an Account </a></li>
              </div>
             </form>
           </div>

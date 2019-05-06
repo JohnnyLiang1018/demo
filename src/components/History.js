@@ -94,7 +94,7 @@ export default class App extends Component {
         
                             <h1>My Purchase History</h1>
                             <ul className="page-breadcrumb">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="#" onClick={(param)=> this.props.handler('homepage')}>Home</a></li>
                                 <li><a href="wishlist.html">History</a></li>
                             </ul>
         

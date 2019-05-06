@@ -90,7 +90,6 @@ class Body extends React.Component {
                 <div className="login-register-form-wrap">
                   <h3>Guest Checkout</h3>
                   <form action="#">
-                    <p>This is a paragraph. No promo for guest checkout?</p>
                     <button className="place-order" onClick={(param)=> this.props.handler('checkout')}>Guest Checkout</button>
 
                   </form>

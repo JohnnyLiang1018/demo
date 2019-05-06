@@ -130,9 +130,9 @@ class LoginPage extends Component {
     
              </div>
              <div className="createAccount">
-             <button type= "submit"><a href='home.html'>SIGN IN</a></button>
+             <button type= "submit"><a href='#' onClick={(param)=> this.props.handler('homepage')}>SIGN IN</a></button>
              
-             <small><a href="Create-account.html">Create Account</a> </small>
+             <small><a href="#" onClick={(param)=> this.props.handler('register')}>Create Account</a> </small>
              </div>
             </form>
           </div>
