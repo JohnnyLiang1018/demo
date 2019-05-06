@@ -79,7 +79,7 @@ class Banner extends React.Component {
         <div className="container">
           <div className="row">
             <div className="page-banner-content col">
-              <h1>Registered User Or Guest Checkout</h1>
+              <h1>Order Confirmation</h1>
             </div>
           </div>
         </div>
