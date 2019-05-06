@@ -213,9 +213,9 @@ class Banner extends React.Component {
                     <div className="row">
 
                       <div className="col-12">
-                            <div clasName="product-show">
+                            <div className="product-show">
                                 <h4>Show:</h4>
-                                <select className="nice-select">
+                                <select clasName="nice-select">
                                     <option>8</option>
                                     <option>12</option>
                                     <option>16</option>
